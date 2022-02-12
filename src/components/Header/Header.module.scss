@@ -1,0 +1,38 @@
+@import "@styles/variables";
+
+.header {
+  width: 100%;
+  background-color: $primary;
+  color: #ffffff;
+
+  p {
+    margin: 0;
+  }
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerTitle {
+  font-size: 2em;
+  padding: 0.2em 0;
+}
+
+.headerCart {
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+
+    svg {
+      margin-right: 0.5em;
+    }
+  }
+}
