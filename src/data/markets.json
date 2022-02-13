@@ -1,0 +1,108 @@
+[
+  {
+    "id": "pappus-pizza",
+    "title": "Pappu's Pizza",
+    "description": "Fresh pizza, made with fresh ingredients",
+    "image": "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
+    "featured": false,
+    "products": [
+      {
+        "id": "cheese-pizza",
+        "title": "Cheese Pizza",
+        "description": "Organic cheese pizza",
+        "price": [
+          {
+            "slice": 4
+          }
+        ],
+        "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
+      },
+      {
+        "id": "veggie-pizza",
+        "title": "Veggie Pizza",
+        "description": "Fresh veggies on your pizza",
+        "price": [
+          {
+            "slice": 5
+          }
+        ],
+        "image": "https://images.unsplash.com/photo-1617470703152-7bc3ab20893e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
+      },
+      {
+        "id": "pepperoni-pizza",
+        "title": "Pepperoni Pizza",
+        "description": "Tasty pepperoni slices",
+        "price": [
+          {
+            "slice": 5
+          }
+        ],
+        "image": "https://images.unsplash.com/photo-1542282811-943ef1a977c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
+      }
+    ]
+  },
+  {
+    "id": "happy-cow-creamery",
+    "title": "Happy Cow Creamery",
+    "description": "Our cows are happy and so are our customers",
+    "image": "https://images.unsplash.com/photo-1594144969140-fc183c0263c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
+    "featured": false,
+    "products": [
+      {
+        "id": "eggs",
+        "title": "Free range eggs",
+        "description": "Organic free range eggs from happy chickens",
+        "price": [
+          {
+            "dozen": 6
+          }
+        ],
+        "image": "https://images.unsplash.com/photo-1506976785307-8732e854ad03?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
+      },
+      {
+        "id": "yogurt",
+        "title": "Homemade Yogurt",
+        "description": "Homemade organic yogurt, creamy and tasty",
+        "price": [
+          {
+            "quart": 6
+          }
+        ],
+        "image": "https://images.unsplash.com/photo-1559894204-ac18b01b7b50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
+      }
+    ]
+  },
+  {
+    "id": "joes-cafe",
+    "title": "Joes Cafe",
+    "description": "An organic cafe that's oh so good",
+    "image": "https://images.unsplash.com/photo-1555647012-4ee6a101d218?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format",
+    "featured": false,
+    "products": [
+      {
+        "id": "coffee",
+        "title": "Organic coffee",
+        "description": "Fresh organic coffee",
+        "price": [
+          {
+            "small": 3,
+            "medium": 4,
+            "large": 5
+          }
+        ],
+        "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
+      },
+      {
+        "id": "cappuccino",
+        "title": "Cappuccino",
+        "description": "The best cappuccino you'll ever have",
+        "price": [
+          {
+            "cup": 5
+          }
+        ],
+        "image": "https://images.unsplash.com/photo-1559894204-ac18b01b7b50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
+      }
+    ]
+  }
+]

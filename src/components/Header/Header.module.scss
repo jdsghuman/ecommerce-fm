@@ -1,9 +1,10 @@
-@import "@styles/variables";
+@import '@styles/variables';
 
 .header {
   width: 100%;
-  background-color: $primary;
+  background-color: $secondary;
   color: #ffffff;
+  padding: 0 10px;
 
   p {
     margin: 0;
