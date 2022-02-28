@@ -1,0 +1,30 @@
+@import '@styles/variables';
+
+.button {
+  background: #f3f5f6;
+  text-align: center;
+  padding: 0.5em 1em;
+  margin: 1em 0 0;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  transition: all 400ms cubic-bezier(0.22, 1, 0.36, 1);
+  &--primary {
+    background: $primary;
+    color: #ffffff;
+    transition: all 800ms cubic-bezier(0.22, 1, 0.36, 1);
+    &:hover {
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
+  &--accent {
+    background: none;
+    border: 0.5px solid $primary;
+    color: $primary;
+    transition: all 400ms cubic-bezier(0.22, 1, 0.36, 1);
+    &:hover {
+      color: #888;
+      background: rgba(55, 55, 55, 0.01);
+    }
+  }
+}

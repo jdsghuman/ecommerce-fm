@@ -8,6 +8,8 @@ import Container from '@components/Container'
 import useHasMounted from '@components/hooks/useHasMounted'
 
 import markets from '@data/markets.json'
+import Button from '@components/Button'
+import Footer from '@components/Footer'
 
 export const getStaticProps: GetStaticProps = async () => {
   const vendors = markets
@@ -33,8 +35,8 @@ const Home: NextPage = ({ vendors }: any) => {
       </Head>
       <Header />
 
-      <main>
-        <Container>
+      <main className={styles.main}>
+        <Container className={styles.padding}>
           <h1>HTX Farmer&apos;s Market</h1>
           <h2>Available shops</h2>
           <ul className={styles.products}>
@@ -45,6 +47,7 @@ const Home: NextPage = ({ vendors }: any) => {
                     <img src={vendor.image} />
                     <h3>{vendor.title}</h3>
                     <p>{vendor.description}</p>
+                    <Button primary>Visit Vendor</Button>
                   </li>
                 </Link>
               )
@@ -52,10 +55,7 @@ const Home: NextPage = ({ vendors }: any) => {
           </ul>
         </Container>
       </main>
-
-      <footer className={styles.footer}>
-        &copy; HTX Farmer&apos;s Market {new Date().getFullYear()}
-      </footer>
+      <Footer />
     </div>
   )
 }
