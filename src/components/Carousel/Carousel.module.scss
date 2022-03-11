@@ -2,10 +2,11 @@
   display: grid;
   grid-template-columns: minmax(5%, 1fr) repeat(8, minmax(100px, 300px)) minmax(5%, 1fr);
   position: relative;
+  margin-top: 50px;
   padding: 0;
   overflow: hidden;
-  height: 600px;
-  max-width: 1800px;
+  height: 400px;
+  max-width: 1400px;
   @media (max-width: 890px) {
     grid-template-columns: repeat(5, minmax(100px, 200px));
     height: 500px;
