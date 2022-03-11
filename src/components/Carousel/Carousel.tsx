@@ -74,6 +74,7 @@ const Carousel = ({ featuredPosts }: CarouselPropType) => {
             count={i}
             setActiveImage={setCurrentInterval}
             active={image.label === images[currentInterval].label}
+            activeNeighbor={i === currentInterval + 1 || i === currentInterval - 1 ? true : false}
           />
         ))}
       </ul>
