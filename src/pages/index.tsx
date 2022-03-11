@@ -10,6 +10,7 @@ import useHasMounted from '@components/hooks/useHasMounted'
 import markets from '@data/markets.json'
 import Button from '@components/Button'
 import Footer from '@components/Footer'
+import Carousel from '@components/Carousel'
 
 export const getStaticProps: GetStaticProps = async () => {
   const vendors = markets
@@ -35,9 +36,9 @@ const Home: NextPage = ({ vendors }: any) => {
       </Head>
       <Header />
 
-      <main className={styles.main}>
-        <Container className={styles.padding}>
-          <h1>HTX Farmer&apos;s Market</h1>
+      <Container className={styles.padding}>
+        <Carousel featuredPosts={vendors} />
+        <main className={styles.main}>
           <h2>Available shops</h2>
           <ul className={styles.products}>
             {vendors.map((vendor: any) => {
@@ -53,8 +54,8 @@ const Home: NextPage = ({ vendors }: any) => {
               )
             })}
           </ul>
-        </Container>
-      </main>
+        </main>
+      </Container>
       <Footer />
     </div>
   )

@@ -1,10 +1,11 @@
 [
   {
     "id": "pappus-pizza",
+    "slug": "pappus-pizza",
     "title": "Pappu's Pizza",
     "description": "Fresh pizza, made with fresh ingredients",
     "image": "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
-    "featured": false,
+    "featured": true,
     "products": [
       {
         "id": "cheese-pizza",
@@ -43,10 +44,11 @@
   },
   {
     "id": "happy-cow-creamery",
+    "slug": "happy-cow-creamery",
     "title": "Happy Cow Creamery",
     "description": "Our cows are happy and so are our customers",
     "image": "https://images.unsplash.com/photo-1594144969140-fc183c0263c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
-    "featured": false,
+    "featured": true,
     "products": [
       {
         "id": "eggs",
@@ -74,6 +76,7 @@
   },
   {
     "id": "joes-cafe",
+    "slug": "joes-cafe",
     "title": "Joes Cafe",
     "description": "An organic cafe that's oh so good",
     "image": "https://images.unsplash.com/photo-1555647012-4ee6a101d218?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format",
@@ -102,6 +105,27 @@
           }
         ],
         "image": "https://images.unsplash.com/photo-1559894204-ac18b01b7b50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
+      }
+    ]
+  },
+  {
+    "id": "bread-man",
+    "slug": "bread-man",
+    "title": "Breadman",
+    "description": "Fresh baked bread",
+    "image": "https://images.unsplash.com/photo-1523294587484-bae6cc870010?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
+    "featured": false,
+    "products": [
+      {
+        "id": "sourdough",
+        "title": "Organic Sourdough Bread",
+        "description": "Fresh organic Sourdough",
+        "price": [
+          {
+            "loaf": 8
+          }
+        ],
+        "image": "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
       }
     ]
   }
