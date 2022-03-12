@@ -1,6 +1,6 @@
-import { FaShoppingCart } from "react-icons/fa";
-import Container from "src/components/Container";
-import styles from "./Header.module.scss";
+import { FaShoppingCart } from 'react-icons/fa'
+import Container from 'src/components/Container'
+import styles from './Header.module.scss'
 
 const Header = ({}) => {
   return (
@@ -15,7 +15,7 @@ const Header = ({}) => {
         </p>
       </Container>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
