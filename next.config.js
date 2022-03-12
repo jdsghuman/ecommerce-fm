@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  target: "serverless",
-};
+  target: 'serverless',
+  images: {
+    domains: ['images.unsplash.com'],
+  },
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig

@@ -1,16 +1,15 @@
 import Link from 'next/link'
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import Header from '@components/Header'
-import styles from '@styles/Home.module.scss'
 import Container from '@components/Container'
 import useHasMounted from '@components/hooks/useHasMounted'
-
 import markets from '@data/markets.json'
-import Button from '@components/Button'
 import Footer from '@components/Footer'
 import Carousel from '@components/Carousel'
+import PostItem from '@components/PostItem/PostItem'
+
+import styles from '@styles/Home.module.scss'
 
 export const getStaticProps: GetStaticProps = async () => {
   const vendors = markets
@@ -37,20 +36,20 @@ const Home: NextPage = ({ vendors }: any) => {
       <Header />
 
       <Container className={styles.padding}>
+        <h3 className={styles.heading}>Featured vendors</h3>
         <Carousel featuredPosts={vendors} />
         <main className={styles.main}>
-          <h2>Available shops</h2>
+          <h3 className={styles.heading}>Shop at our vendors</h3>
           <ul className={styles.products}>
             {vendors.map((vendor: any) => {
               return (
-                <Link key={vendor.id} href={`/vendor/${vendor.id}`}>
-                  <li>
-                    <img src={vendor.image} />
-                    <h3>{vendor.title}</h3>
-                    <p>{vendor.description}</p>
-                    <Button primary>Visit Vendor</Button>
-                  </li>
-                </Link>
+                <PostItem
+                  id={vendor.id}
+                  image={vendor.image}
+                  title={vendor.title}
+                  description={vendor.description}
+                  slug={vendor.slug}
+                />
               )
             })}
           </ul>
