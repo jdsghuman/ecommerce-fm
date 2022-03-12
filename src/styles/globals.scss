@@ -1,3 +1,5 @@
+@import '@styles/variables';
+
 html,
 body {
   padding: 0;
@@ -17,4 +19,11 @@ a {
 
 img {
   max-width: 100%;
+}
+
+*:focus {
+  outline: $secondary dashed 2px;
+  outline-offset: 2px;
+  -moz-outline-radius: 2px;
+  text-decoration: underline;
 }

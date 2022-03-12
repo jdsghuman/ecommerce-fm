@@ -1,9 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import { Key, useEffect, useState } from 'react'
+import { Key, useEffect, useState, useRef } from 'react'
 import CarouselItem from './CarouselItem'
 import Pagination from './Pagination'
 import { useSwipeable } from 'react-swipeable'
 import styles from './Carousel.module.scss'
+import { link } from 'fs'
 
 interface CarouselItemPropType {
   title: string
@@ -18,6 +19,7 @@ interface CarouselPropType {
 }
 
 const Carousel = ({ featuredPosts }: CarouselPropType) => {
+  const readMoreButton = useRef<HTMLDivElement>(null)
   const [currentInterval, setCurrentInterval] = useState(0)
   const [style, setStyle] = useState(styles.carousel__container)
 
@@ -30,6 +32,13 @@ const Carousel = ({ featuredPosts }: CarouselPropType) => {
       slug: post.slug,
     }
   })
+
+  const setFocus = (i: number) => {
+    if (readMoreButton.current !== null) {
+      readMoreButton.current.focus()
+    }
+    setCurrentInterval(i)
+  }
 
   const handlers = useSwipeable({
     onSwipedLeft: () =>
@@ -64,7 +73,7 @@ const Carousel = ({ featuredPosts }: CarouselPropType) => {
           />
         </div>
         <div className={styles.carousel__controls}>
-          <CarouselItem details={images[currentInterval]} />
+          <CarouselItem details={images[currentInterval]} readMoreRef={readMoreButton} />
         </div>
       </div>
       <ul className={styles.carousel__pagination}>
@@ -72,7 +81,7 @@ const Carousel = ({ featuredPosts }: CarouselPropType) => {
           <Pagination
             key={image.key}
             count={i}
-            setActiveImage={setCurrentInterval}
+            setActiveImage={setFocus}
             active={image.label === images[currentInterval].label}
             activeNeighbor={i === currentInterval + 1 || i === currentInterval - 1 ? true : false}
           />
