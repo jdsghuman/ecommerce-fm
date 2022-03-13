@@ -14,6 +14,7 @@ const VendorList = ({ vendors }: VendorsPropType) => {
             description={vendor.description}
             slug={vendor.slug}
             features={false}
+            key={vendor.id}
           />
         )
       })}
