@@ -2,22 +2,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 import classNames from 'classnames/bind'
 import { CgArrowRight } from 'react-icons/cg'
-import PropTypes from 'prop-types'
-import Button from '../Button'
-import { truncateText } from '../Util/Util'
-import styles from './PostItem.module.scss'
+import Button from '@components/Button'
+import { truncateText } from '@components/Util/Util'
+import { Vendor } from '../Types'
+import styles from './VendorItem.module.scss'
 
 const cx = classNames.bind(styles)
 
-interface PostItemPropTypes {
-  id: string
-  image: string
-  title: string
-  description: string
-  slug: string
-}
-
-const PostItem = ({ id, image, title, description, slug }: PostItemPropTypes) => {
+const VendorItem = ({ id, image, title, description, slug }: Vendor) => {
   return (
     <div className={styles.item} key={id}>
       {image ? (
@@ -36,7 +28,7 @@ const PostItem = ({ id, image, title, description, slug }: PostItemPropTypes) =>
         <div className={cx('item__image', 'item__image--default')}></div>
       )}
       <div className={styles.item__link}>
-        <Link href={`/${slug}/` + slug}>
+        <Link href={`/vendor/` + slug}>
           <a>{truncateText(title, 60)}</a>
         </Link>
       </div>
@@ -54,10 +46,4 @@ const PostItem = ({ id, image, title, description, slug }: PostItemPropTypes) =>
   )
 }
 
-PostItem.propTypes = {
-  article: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
-  slug: PropTypes.string.isRequired,
-  lastRef: PropTypes.oneOfType([PropTypes.func, PropTypes.shape({ current: PropTypes.any })]),
-}
-
-export default PostItem
+export default VendorItem
