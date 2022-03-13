@@ -28,6 +28,13 @@
 .headerTitle {
   font-size: 2em;
   padding: 0.2em 0;
+  text-decoration: none;
+  &:focus {
+    outline: #ffffff dashed 1px;
+    outline-offset: 1px;
+    -moz-outline-radius: 2px;
+    text-decoration: underline;
+  }
 }
 
 .headerCart {
