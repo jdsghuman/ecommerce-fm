@@ -7,6 +7,7 @@ import markets from '@data/markets.json'
 import Carousel from '@components/Carousel'
 import VendorList from '@components/Vendor/VendorList'
 import { VendorsPropType } from '@components/Vendor/Types'
+import Heading from '@components/Heading'
 import styles from '@styles/Home.module.scss'
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -34,10 +35,10 @@ const Home = ({ vendors }: VendorsPropType) => {
         <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.css" />
       </Head>
       <Container className={styles.padding}>
-        <h3 className={styles.heading}>Featured vendors</h3>
+        <Heading message={'Featured vendors'} />
         <Carousel featuredPosts={vendors} />
         <main className={styles.main}>
-          <h3 className={styles.heading}>Shop at our vendors</h3>
+          <Heading message={'Shop at our vendors'} />
           <VendorList vendors={vendors} />
         </main>
       </Container>

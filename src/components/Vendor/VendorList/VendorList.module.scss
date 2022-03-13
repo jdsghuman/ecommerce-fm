@@ -4,4 +4,11 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   grid-gap: 2.8em;
   padding-left: 0;
+  @media (max-width: 830px) {
+    grid-gap: 1.4em;
+  }
+  @media (max-width: 830px) {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }
