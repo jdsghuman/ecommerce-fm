@@ -3,7 +3,7 @@
     "id": "pizza-press",
     "slug": "pizza-press",
     "title": "Pizza Press",
-    "description": "Pizza pizza, eat all about it!",
+    "description": "Pizza pizza, eat all about it! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "image": "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
     "featured": true,
     "products": [
@@ -46,7 +46,7 @@
     "id": "happy-cow-creamery",
     "slug": "happy-cow-creamery",
     "title": "Happy Cow Creamery",
-    "description": "Our cows are happy and so are our customers",
+    "description": "Our cows are happy and so are our customers. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "image": "https://images.unsplash.com/photo-1594144969140-fc183c0263c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
     "featured": true,
     "products": [
@@ -78,7 +78,7 @@
     "id": "cafe-nice",
     "slug": "cafe-nice",
     "title": "Cafe Nice",
-    "description": "A cafe that's oh so good and nice",
+    "description": "A cafe that's oh so good and nice. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
     "image": "https://images.unsplash.com/photo-1555647012-4ee6a101d218?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format",
     "featured": false,
     "products": [
@@ -112,7 +112,7 @@
     "id": "house-of-grains",
     "slug": "house-of-grains",
     "title": "House of Grains",
-    "description": "Fresh baked bread artisan loaves. Gluten free available",
+    "description": "Fresh baked bread artisan loaves. Gluten free available. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "image": "https://images.unsplash.com/photo-1523294587484-bae6cc870010?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
     "featured": false,
     "products": [
@@ -133,7 +133,7 @@
     "id": "sudz",
     "slug": "sudz",
     "title": "Sudz",
-    "description": "Handmade soaps, using fresh essential oils & natural ingredients",
+    "description": "Handmade soaps, using fresh essential oils & natural ingredients. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "image": "https://images.unsplash.com/photo-1572336306276-676c92719bec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
     "featured": false,
     "products": [
