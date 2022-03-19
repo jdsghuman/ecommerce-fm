@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router'
 import { GetStaticPaths, GetStaticProps } from 'next'
-import Image from 'next/image'
 import markets from '@data/markets.json'
 import Spinner from '@components/Spinner'
 import { VendorProptype } from '@components/Types/PropTypes'
 import Container from '@components/Container'
+import Store from '@components/Store'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const vendors = markets
@@ -45,9 +45,7 @@ const Vendor = ({ data }: VendorProptype) => {
   }
   return (
     <Container>
-      <div style={{ width: '100%', height: '500px' }}>
-        <Image src={data.image} alt={data.title} width={1000} height={500} layout="responsive" />
-      </div>
+      <Store data={data} />
     </Container>
   )
 }

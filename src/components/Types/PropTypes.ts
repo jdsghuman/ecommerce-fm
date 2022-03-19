@@ -14,6 +14,11 @@ interface ProductsPropType {
   title: string
   description: string
   price: PricePropType[]
+  image: string
+}
+
+export interface StoreProductList {
+  products: ProductsPropType[]
 }
 
 interface PricePropType {
