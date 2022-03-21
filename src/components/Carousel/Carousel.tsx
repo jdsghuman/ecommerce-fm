@@ -15,21 +15,21 @@ interface CarouselItemPropType {
 }
 
 interface CarouselPropType {
-  featuredPosts: CarouselItemPropType[]
+  featuredVendors: CarouselItemPropType[] | []
 }
 
-const Carousel = ({ featuredPosts }: CarouselPropType) => {
+const Carousel = ({ featuredVendors }: CarouselPropType) => {
   const readMoreButton = useRef<HTMLDivElement>(null)
   const [currentInterval, setCurrentInterval] = useState(0)
   const [style, setStyle] = useState(styles.carousel__container)
 
-  const images = featuredPosts.map((post) => {
+  const images = featuredVendors.map((vendor) => {
     return {
-      key: post.id,
-      label: post.title,
-      path: post.image,
-      description: post.description,
-      slug: post.slug,
+      key: vendor.id,
+      label: vendor.title,
+      path: vendor.image,
+      description: vendor.description,
+      slug: vendor.slug,
     }
   })
 
@@ -42,9 +42,9 @@ const Carousel = ({ featuredPosts }: CarouselPropType) => {
 
   const handlers = useSwipeable({
     onSwipedLeft: () =>
-      setCurrentInterval(currentInterval < featuredPosts.length - 1 ? currentInterval + 1 : 0),
+      setCurrentInterval(currentInterval < featuredVendors.length - 1 ? currentInterval + 1 : 0),
     onSwipedRight: () =>
-      setCurrentInterval(currentInterval > 0 ? currentInterval - 1 : featuredPosts.length - 1),
+      setCurrentInterval(currentInterval > 0 ? currentInterval - 1 : featuredVendors.length - 1),
     preventDefaultTouchmoveEvent: true,
     trackMouse: true,
   })
@@ -53,7 +53,7 @@ const Carousel = ({ featuredPosts }: CarouselPropType) => {
     const interval = setInterval(() => {
       setStyle(styles['container--none'])
 
-      setCurrentInterval(currentInterval < featuredPosts.length - 1 ? currentInterval + 1 : 0)
+      setCurrentInterval(currentInterval < featuredVendors.length - 1 ? currentInterval + 1 : 0)
     }, 6000)
     return () => clearInterval(interval)
   })
