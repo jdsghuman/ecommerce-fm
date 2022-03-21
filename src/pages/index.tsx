@@ -6,19 +6,26 @@ import useHasMounted from '@components/hooks/useHasMounted'
 import markets from '@data/markets.json'
 import Carousel from '@components/Carousel'
 import VendorList from '@components/Vendor/VendorList'
-import { VendorsPropType } from '@components/Vendor/Types'
+import { Vendor, VendorsPropType } from '@components/Vendor/Types'
 import Heading from '@components/Heading'
 import styles from '@styles/Home.module.scss'
 
+export interface Props {
+  vendors: Vendor[]
+  featuredVendors: Vendor[]
+}
+
 export const getStaticProps: GetStaticProps = async () => {
   const vendors = markets
+  const featuredVendors = markets.filter((market) => market.featured === true)
   return {
     props: {
       vendors,
+      featuredVendors,
     },
   }
 }
-const Home = ({ vendors }: VendorsPropType) => {
+const Home = ({ vendors, featuredVendors }: Props) => {
   const hasMounted = useHasMounted()
   if (!hasMounted) {
     return null
@@ -36,7 +43,7 @@ const Home = ({ vendors }: VendorsPropType) => {
       </Head>
       <Container className={styles.padding}>
         <Heading message={'Featured vendors'} />
-        <Carousel featuredPosts={vendors} />
+        <Carousel featuredVendors={featuredVendors} />
         <main className={styles.main}>
           <Heading message={'Shop at our vendors'} />
           <VendorList vendors={vendors} />

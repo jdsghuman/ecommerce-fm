@@ -18,7 +18,7 @@ const CarouselItem = ({ details, readMoreRef }: CarouselItemPropType) => (
       <p className={styles.item__description}>{truncateText(details.description, 154)}</p>
       <Link href={`vendor/${details.slug}`}>
         <a ref={readMoreRef} className={styles.item__button}>
-          Read More
+          Visit vendor
         </a>
       </Link>
     </div>

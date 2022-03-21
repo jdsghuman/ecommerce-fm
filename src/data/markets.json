@@ -114,7 +114,7 @@
     "title": "House of Grains",
     "description": "Fresh baked bread artisan loaves. Gluten free available. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "image": "https://images.unsplash.com/photo-1523294587484-bae6cc870010?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
-    "featured": false,
+    "featured": true,
     "products": [
       {
         "id": "sourdough",
@@ -147,6 +147,82 @@
           }
         ],
         "image": "https://images.unsplash.com/photo-1607006482749-f25db0b3fbab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
+      }
+    ]
+  },
+  {
+    "id": "homestead-salad",
+    "slug": "homestead-salad",
+    "title": "Homestead Salad",
+    "description": "Fresh greens and veggies grown in our local farm. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image": "https://images.unsplash.com/photo-1533264533981-8aead62802fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "featured": true,
+    "products": [
+      {
+        "id": "tomatoes",
+        "title": "tomatoes",
+        "description": "Big red tomatoes",
+        "price": [
+          {
+            "10 lb": 5
+          }
+        ],
+        "image": "https://images.unsplash.com/photo-1546094096-0df4bcaaa337?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dG9tYXRvZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "potatoes",
+        "title": "Potatoes",
+        "description": "Potatoes that are ready to eat",
+        "price": [
+          {
+            "10 lb": 4
+          }
+        ],
+        "image": "https://images.unsplash.com/photo-1508313880080-c4bef0730395?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cG90YXRvZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "turnips",
+        "title": "Turnips",
+        "description": "Healthy turnips that taste fresh and will take you back in time",
+        "price": [
+          {
+            "10 lb": 5
+          }
+        ],
+        "image": "https://images.unsplash.com/photo-1593105544559-ecb03bf76f82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dHVybmlwc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "spinach",
+        "title": "Spinach",
+        "description": "These greens are fresh and cleaned, ready to eat and make into a salad or put into a sandwich.",
+        "price": [
+          {
+            "10 lb": 5
+          }
+        ],
+        "image": "https://images.unsplash.com/photo-1588891557811-5f2fba9e3009?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHNwaW5hY2h8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "beets",
+        "title": "Beets",
+        "description": "Eat these right out of the bag or turn them into some fresh beet juice!",
+        "price": [
+          {
+            "10 lb": 5
+          }
+        ],
+        "image": "https://images.unsplash.com/photo-1593528852413-69f279565422?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fGJlZXRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+      },
+      {
+        "id": "rasberries",
+        "title": "Rasberries",
+        "description": "Fresh organic rasberries",
+        "price": [
+          {
+            "10 lb": 4
+          }
+        ],
+        "image": "https://images.unsplash.com/photo-1515681412668-16d6d4a54ab1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFzYmVycmllc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
       }
     ]
   }
