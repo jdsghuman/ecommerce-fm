@@ -14,7 +14,7 @@ interface ProductsPropType {
   id: string
   title: string
   description: string
-  price: PricePropType[]
+  price: string
   image: string
   options?: string
 }

@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Script from 'next/script'
 import classNames from 'classnames/bind'
 import { CgArrowRight } from 'react-icons/cg'
-import Button from '@components/Button'
 import { truncateText } from '@components/Util/Util'
 import styles from './ProductItem.module.scss'
 
@@ -13,7 +12,7 @@ interface ProductItemProps {
   id: string
   title: string
   description: string
-  price: any[]
+  price: string
   image: string
   options?: string
   url: string
