@@ -6,6 +6,7 @@ export interface VendorProptype {
     image: string
     featured: boolean
     products: ProductsPropType[]
+    slug: string
   }
 }
 
@@ -15,10 +16,12 @@ interface ProductsPropType {
   description: string
   price: PricePropType[]
   image: string
+  options?: string
 }
 
 export interface StoreProductList {
   products: ProductsPropType[]
+  url: string
 }
 
 interface PricePropType {
