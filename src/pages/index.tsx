@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Script from 'next/script'
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import Container from '@components/Container'
@@ -49,12 +50,8 @@ const Home = ({ vendors, featuredVendors }: Props) => {
           <VendorList vendors={vendors} />
         </main>
       </Container>
-      <script async src="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.js" />
-      <div
-        hidden
-        id="snipcart"
-        data-api-key="N2FjODNkNzMtMDUxNC00OTkzLWFiZDktYWVkZDYxMDE3ZDI5NjM3Njg0Nzc5NTYxNDA4OTUw"
-      />
+      <Script src="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.js" />
+      <div hidden id="snipcart" data-api-key={process.env.NEXT_PUBLIC_SNIPCART_API_KEY} />
     </div>
   )
 }
