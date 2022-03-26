@@ -50,8 +50,12 @@ const Home = ({ vendors, featuredVendors }: Props) => {
           <VendorList vendors={vendors} />
         </main>
       </Container>
-      <Script src="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.js" />
-      <div hidden id="snipcart" data-api-key={process.env.NEXT_PUBLIC_SNIPCART_API_KEY} />
+      <Script
+        src="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.js"
+        id="snipcart"
+        data-api-key={process.env.NEXT_PUBLIC_SNIPCART_API_KEY}
+      />
+      {/* <div hidden id="snipcart" data-api-key={process.env.NEXT_PUBLIC_SNIPCART_API_KEY} /> */}
     </div>
   )
 }
