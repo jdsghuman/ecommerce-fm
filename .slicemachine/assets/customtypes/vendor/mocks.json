@@ -1,0 +1,21 @@
+{
+  "id": "9d58d2b7-6093-432f-9428-76aa511d5709",
+  "uid": "numquam-sunt-nesciunt",
+  "type": "vendor",
+  "data": {
+    "name": "streamline rich eyeballs",
+    "description": "redefine virtual networks",
+    "image": {
+      "link_type": "Web",
+      "url": "http://google.com"
+    },
+    "about": [
+      {
+        "type": "paragraph",
+        "text": "Nulla exercitation voluptate cillum magna anim nisi ea nulla non sunt esse eu ut.",
+        "spans": []
+      }
+    ],
+    "featured": true
+  }
+}
