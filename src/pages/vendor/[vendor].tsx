@@ -5,6 +5,7 @@ import Spinner from '@components/Spinner'
 import { VendorProptype } from '@components/Types/PropTypes'
 import Container from '@components/Container'
 import Store from '@components/Store'
+import { createClient } from '../../../prismicio'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const vendors = markets
@@ -15,7 +16,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: false }
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }: any) => {
+export const getStaticProps: GetStaticProps = async ({ params, previewData }: any) => {
+  const client = createClient({ previewData })
+  const vendor = await client.getByUID('vendor', params.vendor)
+  const allProducts = await client.getByType('product')
+  const products = allProducts.results
+    .filter((product) => product.data.vendorName.uid === params.vendor)
+    .map((product) => product.data)
   const vendors = markets
 
   const result = vendors.find(({ id }) => id === params.vendor)
@@ -26,15 +33,19 @@ export const getStaticProps: GetStaticProps = async ({ params }: any) => {
   return {
     props: {
       data: result,
+      vendor,
+      products: products,
     },
     revalidate: 200,
   }
 }
 
-const Vendor = ({ data }: VendorProptype) => {
+const Vendor = ({ data, vendor, products }: VendorProptype) => {
   const router = useRouter()
 
   console.log('data', data)
+  console.log('vendor', vendor)
+  console.log('products', products)
 
   if (router.isFallback) {
     return <Spinner />
@@ -45,7 +56,7 @@ const Vendor = ({ data }: VendorProptype) => {
   }
   return (
     <Container>
-      <Store data={data} />
+      <Store data={data} vendor={vendor} products={products} />
     </Container>
   )
 }

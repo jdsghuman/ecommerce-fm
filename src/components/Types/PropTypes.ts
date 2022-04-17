@@ -8,6 +8,8 @@ export interface VendorProptype {
     products: ProductsPropType[]
     slug: string
   }
+  vendor: any
+  products: any
 }
 
 interface ProductsPropType {

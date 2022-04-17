@@ -9,7 +9,7 @@ import styles from './VendorItem.module.scss'
 
 const cx = classNames.bind(styles)
 
-const VendorItem = ({ id, image, title, description, slug }: Vendor) => {
+const VendorItem = ({ id, image, title, description, slug }: any) => {
   return (
     <div className={styles.item} key={id}>
       {image ? (
