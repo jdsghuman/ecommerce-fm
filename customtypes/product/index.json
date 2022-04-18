@@ -26,19 +26,19 @@
           "placeholder": ""
         }
       },
-      "price": {
-        "type": "Text",
-        "config": {
-          "label": "Price",
-          "placeholder": ""
-        }
-      },
       "image": {
         "type": "Link",
         "config": {
           "label": "Image",
           "placeholder": "",
           "select": null
+        }
+      },
+      "price": {
+        "type": "Text",
+        "config": {
+          "label": "Price",
+          "placeholder": ""
         }
       },
       "vendorName": {

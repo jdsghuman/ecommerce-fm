@@ -1,5 +1,5 @@
+import { Vendor, VendorsPropType } from '@components/Types/PropTypes'
 import VendorItem from '@components/Vendor/VendorItem'
-import { VendorsPropType, Vendor } from '../Types'
 import styles from './VendorList.module.scss'
 
 const VendorList = ({ vendors }: VendorsPropType) => {
@@ -9,11 +9,10 @@ const VendorList = ({ vendors }: VendorsPropType) => {
         return (
           <VendorItem
             id={vendor.id}
-            image={vendor.image}
-            title={vendor.title}
-            description={vendor.description}
-            slug={vendor.slug}
-            features={false}
+            image={vendor.data.image.url}
+            name={vendor.data.name}
+            description={vendor.data.description}
+            slug={vendor.uid}
             key={vendor.id}
           />
         )

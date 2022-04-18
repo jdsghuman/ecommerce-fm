@@ -3,19 +3,19 @@ import ProductItem from '../StoreProductItem/ProductItem'
 
 import styles from './StoreProductList.module.scss'
 
-const StoreProductList = ({ products, url }: StoreProductList): JSX.Element => {
+const StoreProductList = ({ products }: StoreProductList): JSX.Element => {
   return (
     <ul className={styles.products}>
       {products.map((product) => (
         <ProductItem
-          id={product.id}
-          key={product.id}
-          title={product.title}
-          image={product.image}
+          id={product.vendorName.id}
+          key={product.vendorName.id}
+          title={product.name}
+          image={product.image.url}
           description={product.description}
           price={product.price}
           options={product.options}
-          url={url}
+          url={product.name}
         />
       ))}
     </ul>

@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import Image from 'next/image'
-import { VendorProptype } from '@components/Types/PropTypes'
 import StoreProductList from './StoreProductList'
 
 import styles from './Store.module.scss'
 import Button from '@components/Button'
+import { StoreProptype } from '@components/Types/PropTypes'
 
-const Store = ({ data }: VendorProptype) => {
+const Store = ({ vendor, products }: StoreProptype) => {
   const [showProducts, setShowProducts] = useState(true)
 
   const toggleButton = (type: string) => {
@@ -22,11 +22,16 @@ const Store = ({ data }: VendorProptype) => {
     }
   }
 
-  console.log('data', data)
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>{data.title}</h1>
-      <Image src={data.image} alt={data.title} width={800} height={400} layout="responsive" />
+      <h1 className={styles.title}>{vendor.data.name}</h1>
+      <Image
+        src={vendor.data.image.url}
+        alt={vendor.data.name}
+        width={800}
+        height={400}
+        layout="responsive"
+      />
       <div className={styles.container__toggle}>
         <Button
           onClick={() => toggleButton('product')}
@@ -43,10 +48,8 @@ const Store = ({ data }: VendorProptype) => {
           About us
         </Button>
       </div>
-      {data.products && showProducts ? (
-        <StoreProductList products={data.products} url={data.slug} />
-      ) : null}
-      {!showProducts && <p className={styles.about}>{data.description}</p>}
+      {products && showProducts ? <StoreProductList products={products} /> : null}
+      {!showProducts && <p className={styles.about}>{vendor.data.description}</p>}
     </div>
   )
 }

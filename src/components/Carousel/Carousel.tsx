@@ -4,7 +4,7 @@ import CarouselItem from './CarouselItem'
 import Pagination from './Pagination'
 import { useSwipeable } from 'react-swipeable'
 import styles from './Carousel.module.scss'
-import { link } from 'fs'
+import { FeaturedVendorsPropType } from '@components/Types/PropTypes'
 
 interface CarouselItemPropType {
   title: string
@@ -18,18 +18,18 @@ interface CarouselPropType {
   featuredVendors: CarouselItemPropType[] | []
 }
 
-const Carousel = ({ featuredVendors }: CarouselPropType) => {
+const Carousel = ({ featuredVendors }: FeaturedVendorsPropType) => {
   const readMoreButton = useRef<HTMLDivElement>(null)
   const [currentInterval, setCurrentInterval] = useState(0)
   const [style, setStyle] = useState(styles.carousel__container)
 
   const images = featuredVendors.map((vendor) => {
     return {
-      key: vendor.id,
-      label: vendor.title,
-      path: vendor.image,
-      description: vendor.description,
-      slug: vendor.slug,
+      key: vendor,
+      label: vendor.data.name,
+      path: vendor.data.image.url,
+      description: vendor.data.description,
+      slug: vendor.uid,
     }
   })
 
@@ -77,12 +77,12 @@ const Carousel = ({ featuredVendors }: CarouselPropType) => {
         </div>
       </div>
       <ul className={styles.carousel__pagination}>
-        {images.map((image: { key: Key | null | undefined; label: any }, i: number) => (
+        {images.map((image, i) => (
           <Pagination
-            key={image.key}
+            key={`${i}-${image.key}`}
+            active={image.label === images[currentInterval].label}
             count={i}
             setActiveImage={setFocus}
-            active={image.label === images[currentInterval].label}
             activeNeighbor={i === currentInterval + 1 || i === currentInterval - 1 ? true : false}
           />
         ))}

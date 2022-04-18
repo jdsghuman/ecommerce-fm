@@ -3,42 +3,36 @@ import type { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Container from '@components/Container'
 import useHasMounted from '@components/hooks/useHasMounted'
-import markets from '@data/markets.json'
 import Carousel from '@components/Carousel'
 import VendorList from '@components/Vendor/VendorList'
-import { Vendor, VendorsPropType } from '@components/Vendor/Types'
 import Heading from '@components/Heading'
 import { createClient } from '../../prismicio'
+import { Vendor } from '@components/Types/PropTypes'
 
 import styles from '@styles/Home.module.scss'
 
 export interface Props {
   vendors: Vendor[]
   featuredVendors: Vendor[]
-  page: any
 }
 
 export const getStaticProps: GetStaticProps = async ({ previewData }) => {
   const client = createClient({ previewData })
-  const page = await client.getAllByType('vendor')
-
-  const vendors = markets
-  const featuredVendors = markets.filter((market) => market.featured === true)
+  const vendors = await client.getAllByType('vendor')
+  const featuredVendors = vendors.filter((vendor) => vendor.data.featured)
   return {
     props: {
       vendors,
       featuredVendors,
-      page,
     },
   }
 }
-const Home = ({ vendors, featuredVendors, page }: Props) => {
+const Home = ({ vendors, featuredVendors }: Props) => {
   const hasMounted = useHasMounted()
   if (!hasMounted) {
     return null
   }
 
-  console.log('page', page)
   return (
     <div className={styles.container}>
       <Head>

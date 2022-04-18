@@ -4,24 +4,25 @@ import classNames from 'classnames/bind'
 import { CgArrowRight } from 'react-icons/cg'
 import Button from '@components/Button'
 import { truncateText } from '@components/Util/Util'
-import { Vendor } from '../Types'
 import styles from './VendorItem.module.scss'
 
 const cx = classNames.bind(styles)
 
-const VendorItem = ({ id, image, title, description, slug }: Vendor) => {
+interface Prop {
+  id: string
+  image: string
+  name: string
+  description: string
+  slug: string
+}
+
+const VendorItem = ({ id, image, name, description, slug }: Prop) => {
   return (
     <div className={styles.item} key={id}>
       {image ? (
         <div>
           <Link href={`/vendor/` + slug} passHref>
-            <Image
-              src={image}
-              alt={title}
-              className={styles.item__image}
-              width={475}
-              height={300}
-            />
+            <Image src={image} alt={name} className={styles.item__image} width={475} height={300} />
           </Link>
         </div>
       ) : (
@@ -29,7 +30,7 @@ const VendorItem = ({ id, image, title, description, slug }: Vendor) => {
       )}
       <div className={styles.item__link}>
         <Link href={`/vendor/` + slug}>
-          <a>{truncateText(title, 60)}</a>
+          <a>{truncateText(name, 60)}</a>
         </Link>
       </div>
       <p className={styles.item__description}>

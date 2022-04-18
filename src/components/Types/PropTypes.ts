@@ -1,27 +1,57 @@
-export interface VendorProptype {
+export interface Vendor {
   data: {
-    id: string
-    title: string
+    about: {
+      type: string
+      text: string
+      spans: []
+    }
     description: string
-    image: string
     featured: boolean
-    products: ProductsPropType[]
-    slug: string
+    image: {
+      url: string
+    }
+    name: string
   }
+  first_publication_date: string
+  last_publication_date: string
+  id: string
+  slugs: []
+  tags: []
+  type: string
+  uid: string
+}
+
+export interface VendorsPropType {
+  vendors: Vendor[]
+}
+
+export interface FeaturedVendorsPropType {
+  featuredVendors: Vendor[]
+}
+
+export interface StoreProptype {
+  vendor: Vendor
+  products: ProductsPropType[]
 }
 
 interface ProductsPropType {
-  id: string
-  title: string
   description: string
+  image: {
+    url: string
+  }
+  name: string
   price: string
-  image: string
+  vendorName: {
+    first_publication_date: string
+    id: string
+    last_publication_date: string
+    tags: []
+  }
   options?: string
 }
 
 export interface StoreProductList {
   products: ProductsPropType[]
-  url: string
 }
 
 interface PricePropType {

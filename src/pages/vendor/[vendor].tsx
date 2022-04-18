@@ -1,51 +1,56 @@
 import { useRouter } from 'next/router'
 import { GetStaticPaths, GetStaticProps } from 'next'
-import markets from '@data/markets.json'
 import Spinner from '@components/Spinner'
-import { VendorProptype } from '@components/Types/PropTypes'
 import Container from '@components/Container'
 import Store from '@components/Store'
+import { createClient } from '../../../prismicio'
+import { StoreProptype } from '@components/Types/PropTypes'
+import { Vendor } from '@components/Types/PropTypes'
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const vendors = markets
-
+  const client = createClient()
+  const vendors = await client.getAllByType('vendor')
   const paths = vendors.map((vendor) => ({
-    params: { vendor: vendor.id },
+    params: { vendor: vendor.uid as string },
   }))
   return { paths, fallback: false }
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }: any) => {
-  const vendors = markets
+export const getStaticProps: GetStaticProps = async ({ params, previewData }: any) => {
+  const client = createClient({ previewData })
+  const vendor = await client.getByUID('vendor', params.vendor)
+  const allProducts = await client.getByType('product')
 
-  const result = vendors.find(({ id }) => id === params.vendor)
-  if (!result) {
+  const products = allProducts.results
+    .filter((product) => product.data.vendorName.uid === params.vendor)
+    .map((product) => product.data)
+
+  if (!vendor) {
     return { notFound: true }
   }
 
   return {
     props: {
-      data: result,
+      vendor,
+      products,
     },
     revalidate: 200,
   }
 }
 
-const Vendor = ({ data }: VendorProptype) => {
+const Vendor = ({ vendor, products }: StoreProptype) => {
   const router = useRouter()
-
-  console.log('data', data)
 
   if (router.isFallback) {
     return <Spinner />
   }
 
-  if (!data) {
+  if (!vendor) {
     return <Spinner />
   }
   return (
     <Container>
-      <Store data={data} />
+      <Store vendor={vendor} products={products} />
     </Container>
   )
 }
