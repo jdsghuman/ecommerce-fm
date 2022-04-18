@@ -5,9 +5,9 @@ import Container from '@components/Container'
 import useHasMounted from '@components/hooks/useHasMounted'
 import Carousel from '@components/Carousel'
 import VendorList from '@components/Vendor/VendorList'
-import { Vendor } from '@components/Vendor/Types'
 import Heading from '@components/Heading'
 import { createClient } from '../../prismicio'
+import { Vendor } from '@components/Types/PropTypes'
 
 import styles from '@styles/Home.module.scss'
 
@@ -32,7 +32,6 @@ const Home = ({ vendors, featuredVendors }: Props) => {
   if (!hasMounted) {
     return null
   }
-  console.log('featuredVendors----', featuredVendors)
 
   return (
     <div className={styles.container}>

@@ -4,7 +4,7 @@ import CarouselItem from './CarouselItem'
 import Pagination from './Pagination'
 import { useSwipeable } from 'react-swipeable'
 import styles from './Carousel.module.scss'
-import { FeaturedVendorsPropType } from '@components/Vendor/Types'
+import { FeaturedVendorsPropType } from '@components/Types/PropTypes'
 
 interface CarouselItemPropType {
   title: string

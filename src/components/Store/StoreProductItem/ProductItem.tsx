@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Script from 'next/script'
 import classNames from 'classnames/bind'
 import { CgArrowRight } from 'react-icons/cg'
-import { truncateText } from '@components/Util/Util'
+import { truncateText, convertImage, toBase64 } from '@components/Util/Util'
 import styles from './ProductItem.module.scss'
 
 const cx = classNames.bind(styles)
@@ -19,7 +19,6 @@ interface ProductItemProps {
 }
 
 const ProductItem = ({ id, title, description, price, image, options, url }: ProductItemProps) => {
-  console.log('price', price)
   return (
     <>
       <Head>
@@ -40,6 +39,8 @@ const ProductItem = ({ id, title, description, price, image, options, url }: Pro
               width={475}
               height={300}
               priority
+              placeholder="blur"
+              blurDataURL={`data:image/svg+xml;base64,${toBase64(convertImage(700, 475))}`}
             />
           </div>
         ) : (
