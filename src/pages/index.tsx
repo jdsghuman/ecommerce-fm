@@ -10,6 +10,7 @@ import { createClient } from '../../prismicio'
 import { Vendor } from '@components/Types/PropTypes'
 
 import styles from '@styles/Home.module.scss'
+import Banner from '@components/Banner'
 
 export interface Props {
   vendors: Vendor[]
@@ -47,6 +48,7 @@ const Home = ({ vendors, featuredVendors }: Props) => {
         <Heading message={'Featured vendors'} />
         <Carousel featuredVendors={featuredVendors} />
         <main className={styles.main}>
+          <Banner />
           <Heading message={'Shop at our vendors'} />
           <VendorList vendors={vendors} />
         </main>
