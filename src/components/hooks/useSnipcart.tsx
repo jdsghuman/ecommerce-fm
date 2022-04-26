@@ -1,7 +1,12 @@
 import { useState, createContext, useContext, useEffect } from 'react'
 
 interface ContextProp {
-  date: number
+  snipcart?: {
+    cart: {
+      subtotal: number
+      total: number
+    }
+  }
 }
 
 export const SnipcartContext = createContext<ContextProp>({} as ContextProp)
