@@ -1,9 +1,9 @@
-import { StoreProductList } from '@components/Types/PropTypes'
+import { StoreProptype } from '@components/Types/PropTypes'
 import ProductItem from '../StoreProductItem/ProductItem'
 
 import styles from './StoreProductList.module.scss'
 
-const StoreProductList = ({ products }: StoreProductList): JSX.Element => {
+const StoreProductList = ({ products, vendor }: StoreProptype): JSX.Element => {
   return (
     <ul className={styles.products}>
       {products.map((product) => (
@@ -15,7 +15,7 @@ const StoreProductList = ({ products }: StoreProductList): JSX.Element => {
           description={product.description}
           price={product.price}
           options={product.options}
-          url={product.name}
+          url={vendor.slugs.toLocaleString()}
         />
       ))}
     </ul>
