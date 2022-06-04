@@ -12,7 +12,9 @@ const Header = ({}) => {
     <header className={styles.header}>
       <Container className={styles.headerContainer}>
         <Link href="/">
-          <a className={styles.headerTitle}>HTX Farmer&apos;s Market</a>
+          <a className={styles.headerTitle}>
+            <span className={styles.logo}>HTX</span> Market
+          </a>
         </Link>
         <div className={styles.headerCart}>
           <button className="snipcart-checkout">

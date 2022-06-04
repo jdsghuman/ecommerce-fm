@@ -21,6 +21,11 @@
       flex-direction: row;
     }
   }
+
+  .logo {
+    color: $tertiary;
+  }
+
   .copy {
     display: flex;
     justify-content: center;

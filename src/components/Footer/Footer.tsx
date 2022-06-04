@@ -37,7 +37,11 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className={styles.copy}>&copy; HTX Farmer&apos;s Market {new Date().getFullYear()}</div>
+      <div className={styles.copy}>
+        <p>
+          &copy;<span className={styles.logo}>HTX </span> Market {new Date().getFullYear()}
+        </p>
+      </div>
     </footer>
   )
 }
