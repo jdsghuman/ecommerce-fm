@@ -37,7 +37,7 @@ export function useSnipcartState() {
 
     return () => {
       if (unsubscribe) {
-        unsubscribe
+        unsubscribe()
       }
     }
   }, [])

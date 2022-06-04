@@ -94,21 +94,22 @@
     align-self: center;
     margin-top: auto;
     padding: 0.5em 1em;
-    border: 1px solid $primary;
+    border: 1px solid $tertiary;
+    background: $tertiary;
     box-shadow: none;
-    color: #555;
+    color: #fff;
     font-size: 1rem;
     border-radius: 2px;
     cursor: pointer;
+    transition: all 400ms cubic-bezier(0.22, 1, 0.36, 1);
     &:hover {
-      color: #888;
       box-shadow: $box-shadow-button;
+      background: lighten($tertiary, 10%);
     }
     &--accent {
       background: none;
-      border: 0.5px solid $secondary;
-      color: $secondary;
-      transition: all 400ms cubic-bezier(0.22, 1, 0.36, 1);
+      border: 0.5px solid $tertiary;
+      color: $tertiary;
       &:hover {
         color: #888;
         background: rgba(55, 55, 55, 0.01);
