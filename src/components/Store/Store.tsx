@@ -56,7 +56,7 @@ const Store = ({ vendor, products }: StoreProptype) => {
             About us
           </Button>
         </div>
-        {products && showProducts ? <StoreProductList products={products} /> : null}
+        {products && showProducts ? <StoreProductList vendor={vendor} products={products} /> : null}
         {!showProducts && <p className={styles.about}>{vendor.data.description}</p>}
       </div>
     </>
