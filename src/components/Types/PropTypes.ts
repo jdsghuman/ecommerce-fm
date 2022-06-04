@@ -41,6 +41,7 @@ interface ProductsPropType {
   }
   name: string
   price: string
+  uid: string
   vendorName: {
     first_publication_date: string
     id: string

@@ -4,7 +4,7 @@ import { PrismicProvider } from '@prismicio/react'
 import { PrismicPreview } from '@prismicio/next'
 import { linkResolver, repositoryName } from '../../prismicio'
 import Layout from '@components/Layout'
-import { SnipcartProvider } from '@components/hooks/useSnipcart'
+import { SnipcartProvider } from 'src/hooks/useSnipcart'
 
 import '../styles/globals.scss'
 function MyApp({ Component, pageProps }: AppProps) {

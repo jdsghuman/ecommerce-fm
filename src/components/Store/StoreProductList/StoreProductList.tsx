@@ -8,8 +8,8 @@ const StoreProductList = ({ products }: StoreProductList): JSX.Element => {
     <ul className={styles.products}>
       {products.map((product) => (
         <ProductItem
-          id={product.vendorName.id}
-          key={product.vendorName.id}
+          uid={product.uid}
+          key={product.uid}
           title={product.name}
           image={product.image.url}
           description={product.description}

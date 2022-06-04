@@ -3,7 +3,7 @@ import { FaShoppingCart } from 'react-icons/fa'
 import Container from 'src/components/Container'
 import styles from './Header.module.scss'
 
-import { useSnipcart } from '@hooks/useSnipcart'
+import { useSnipcart } from 'src/hooks/useSnipcart'
 
 const Header = ({}) => {
   const { cart = {} } = useSnipcart()

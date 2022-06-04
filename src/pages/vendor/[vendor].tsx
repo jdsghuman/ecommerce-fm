@@ -23,7 +23,7 @@ export const getStaticProps: GetStaticProps = async ({ params, previewData }: an
 
   const products = allProducts.results
     .filter((product) => product.data.vendorName.uid === params.vendor)
-    .map((product) => product.data)
+    .map((product) => ({ ...product.data, uid: product.uid }))
 
   if (!vendor) {
     return { notFound: true }

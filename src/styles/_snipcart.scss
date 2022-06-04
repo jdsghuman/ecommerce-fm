@@ -1,0 +1,15 @@
+@import 'color-palette';
+
+#snipcart {
+  /* Default */
+  --bgColor-buttonPrimary: #{$tertiary};
+
+  /* Hover */
+  --bgColor-buttonPrimary-hover: #{lighten($tertiary, 10)};
+  --shadow-buttonPrimary-hover: #{none};
+  /* Active */
+  --bgColor-buttonPrimary-active: #{darken($tertiary, 10)};
+  /* Focus */
+  --bgColor-buttonPrimary-focus: #{lighten($tertiary, 10)};
+  --shadow-buttonPrimary-focus: 0 0 10px #{lighten($tertiary, 10)};
+}
